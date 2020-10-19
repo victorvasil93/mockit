@@ -25,11 +25,15 @@ from mockit import MockitServer
 
 
 m_s = MockitServer()
+```
 
-# Mock Json Endpoints.
+Mock Json Endpoints.
+```python
 m_s.add_json_response(url="/json_endpoint", serializable={"endpoint": "json"}, methods=("GET", ))
+```
 
-# Mock XML Endpoints.
+Mock XML Endpoints.
+```python
 m_s.add_string_response(
     url="/xml_endpoint",
     response="""
@@ -38,8 +42,9 @@ m_s.add_string_response(
     </xml-tag>
 """, methods=("GET", )
 )
-
-# Start mock service.
+```
+Start mock service.
+```python
 m_s.start()
 ```
 
@@ -56,11 +61,7 @@ class TestPersonalities:
     @classmethod
     def setup_class(cls):
         cls.m_s = MockServer()
-
-        # Mock Json Endpoints.
         cls.m_s.add_json_response(url="/json_endpoint", serializable={"endpoint": "json"}, methods=("GET", ))
-
-        # Start mock service.
         cls.m_s.start()
 
 

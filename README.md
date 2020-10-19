@@ -20,19 +20,21 @@ $ pip install mockit
 
 <h3>Examples:</h3>
 <h5> Get Started: </h5>
-```python
-from mockit import MockitServer
 
+```python
+
+from mockit import MockitServer
 
 m_s = MockitServer()
 ```
 
-Mock Json Endpoints.
+Mock Json Endpoints:
+
 ```python
 m_s.add_json_response(url="/json_endpoint", serializable={"endpoint": "json"}, methods=("GET", ))
 ```
 
-Mock XML Endpoints.
+Mock XML Endpoints:
 ```python
 m_s.add_string_response(
     url="/xml_endpoint",
@@ -43,7 +45,7 @@ m_s.add_string_response(
 """, methods=("GET", )
 )
 ```
-Start mock service.
+Start mock service:
 ```python
 m_s.start()
 ```

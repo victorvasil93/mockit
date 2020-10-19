@@ -41,8 +41,8 @@ m_s.add_string_response(
 
 # Start mock service.
 m_s.start()
+```
 
-``` 
 
 <h5> With Pytest: </h5> 
 
@@ -56,7 +56,7 @@ class TestPersonalities:
     @classmethod
     def setup_class(cls):
         cls.m_s = MockServer()
-        
+
         # Mock Json Endpoints.
         cls.m_s.add_json_response(url="/json_endpoint", serializable={"endpoint": "json"}, methods=("GET", ))
 
@@ -74,7 +74,6 @@ class TestPersonalities:
     @classmethod
     def teardown_class(cls):
         cls.m_s.terminate()
-
 ```
 
 <h3>Features:</h3>

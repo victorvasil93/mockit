@@ -86,4 +86,4 @@ class TestPersonalities:
 
 <h3>Bug report:</h3>
 
-If you have any trouble, report bug at GitHub Issue https://github.com/victorvasiliev/mockit/issues
+If you have any trouble, report bug at GitHub Issue https://github.com/victorvasil93/mockit/issues

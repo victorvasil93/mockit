@@ -1,1 +1,1 @@
-from mock_server import MockitServer
+from .mock_server import MockitServer
